@@ -1,0 +1,82 @@
+@media screen and (min-width: 801px) {
+	body {
+		display: grid;
+		grid-template-areas:
+			"header menu"
+			"main aside"
+			"footer footer"
+		;
+		grid-template-columns:
+			80% 20%
+		;
+		grid-template-rows:
+			100px
+			auto
+			100px
+		;
+	}
+}
+@media screen and (max-width: 800px){
+	body {
+		display: grid;
+		grid-template-areas:
+			"header"
+			"menu"
+			"main"
+			"aside"
+			"footer"
+		;
+		grid-template-columns:
+			100%
+		;
+		grid-template-rows:
+			100px
+			40px
+			auto
+			60px
+			100px
+		;
+	}
+
+}
+body, h1 { margin: 0; }
+header {
+	background-color: yellow;
+	grid-area: header;
+}
+#gameCtrl {
+	background-color: red;
+	grid-area: menu;
+}
+#canva {
+	background-color: white;
+	grid-area: main;
+	margin: 3rem auto;
+}
+[data-cell="hdl"],
+[data-cell="hdr"] {
+	background-color: #c3c6c5;
+}
+aside {
+	background-color: #c3c6c5;
+	grid-area: aside;
+	text-align: center;
+}
+#points {
+	background-color: #000;
+	color: #fff;
+	font-family: Georgia;
+	font-size: 2rem;
+	font-weight: 800;
+	margin: 1rem auto;
+	text-align: center;
+}
+#nextItem hr {
+	border-color: red;
+}
+footer {
+	background-color: yellow;
+	grid-area: footer;
+}
+.doDsp{display: block; }
+.noDsp{display: none; !important;}
